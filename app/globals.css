@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020817;
+  --foreground: #e2e8f0;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -12,15 +16,93 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(34, 211, 238, 0.12), transparent 25%),
+    linear-gradient(180deg, var(--background) 0%, #020617 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+html:not(.dark) body {
+  background:
+    radial-gradient(circle at top, rgba(8, 145, 178, 0.09), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+html:not(.dark) .bg-slate-950,
+html:not(.dark) [class~="bg-slate-950/70"],
+html:not(.dark) [class~="bg-slate-950/80"] {
+  background-color: #ffffff;
+}
+
+html:not(.dark) .bg-slate-900,
+html:not(.dark) [class~="bg-slate-900/60"],
+html:not(.dark) [class~="bg-slate-900/70"],
+html:not(.dark) [class~="bg-slate-900/80"] {
+  background-color: #f1f5f9;
+}
+
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-700 {
+  border-color: #cbd5e1;
+}
+
+html:not(.dark) .text-white,
+html:not(.dark) .text-slate-100 {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300 {
+  color: #334155;
+}
+
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-slate-500 {
+  color: #64748b;
+}
+
+html:not(.dark) pre {
+  color: #0f172a;
+}
+
+html:not(.dark) ::selection {
+  background: rgba(8, 145, 178, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
