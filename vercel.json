@@ -1,5 +1,0 @@
-{
-  "framework": null,
-  "buildCommand": "mkdir -p out && cp public/google55ff53bcc23f6fe8.html out/index.html && cp public/google55ff53bcc23f6fe8.html out/google55ff53bcc23f6fe8.html",
-  "outputDirectory": "out"
-}
