@@ -124,7 +124,7 @@ export function runRegexTest(pattern: string, flags: string, text: string) {
       ok: false,
       error:
         error instanceof Error
-          ? `Invalid regular expression: ${error.message}`
+          ? `Invalid regular expression: ${error.message.replace(/^Invalid regular expression:\s*/, "")}`
           : "Invalid regular expression.",
     };
   }

@@ -14,10 +14,10 @@ export default function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-500/10 text-sm font-bold text-cyan-300">
-            DT
+            ATH
           </div>
           <div>
-            <div className="text-sm font-semibold tracking-[0.12em] text-slate-300 uppercase">Dev Tools</div>
+            <div className="text-base font-semibold text-white">AllToolHub</div>
           </div>
         </Link>
 

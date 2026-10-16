@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms",
-  description: "Terms of use for the Free Online Developer Tools platform.",
+  title: "Terms of Use",
+  description: "Terms of use for AllToolHub browser-based developer utilities.",
+  alternates: { canonical: "/terms" },
+  openGraph: { title: "Terms of Use | AllToolHub", url: "/terms" },
 };
 
 export default function TermsPage() {

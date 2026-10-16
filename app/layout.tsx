@@ -14,14 +14,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+function getBaseUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "https://alltoolhub.vercel.app";
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL(getBaseUrl()),
   title: {
-    default: "Free Online Developer Tools",
-    template: "%s | Free Online Developer Tools",
+    default: "AllToolHub: Private Developer Tools That Run in Your Browser",
+    template: "%s | AllToolHub",
   },
   description:
-    "Format, validate, decode, and transform common developer data with fast, privacy-friendly browser utilities.",
+    "JSON, JWT, cron, regex, CSV, and SQL tools that never upload your data. Free, no sign-up.",
   keywords: [
     "developer tools",
     "JSON formatter",
@@ -31,11 +38,15 @@ export const metadata: Metadata = {
     "CSV to JSON",
     "SQL formatter",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Free Online Developer Tools",
+    title: "AllToolHub: Private Developer Tools That Run in Your Browser",
     description:
-      "Fast, browser-based developer utilities for JSON, JWTs, CSV, cron, regex, and SQL.",
+      "JSON, JWT, cron, regex, CSV, and SQL tools that never upload your data. Free, no sign-up.",
     type: "website",
+    url: "/",
   },
 };
 

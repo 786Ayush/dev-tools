@@ -8,44 +8,45 @@ function getBaseUrl(): string {
   return "https://alltoolhub.vercel.app";
 }
 
+const LAST_UPDATED = new Date("2026-10-16");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getBaseUrl();
-  const now = new Date();
 
   return [
     {
       url: `${baseUrl}/`,
-      lastModified: now,
+      lastModified: LAST_UPDATED,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/tools`,
-      lastModified: now,
+      lastModified: LAST_UPDATED,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     ...tools.map((tool) => ({
       url: `${baseUrl}/tools/${tool.slug}`,
-      lastModified: now,
+      lastModified: LAST_UPDATED,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
+      lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: now,
+      lastModified: LAST_UPDATED,
       changeFrequency: "yearly",
       priority: 0.4,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: now,
+      lastModified: LAST_UPDATED,
       changeFrequency: "yearly",
       priority: 0.4,
     },

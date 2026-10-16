@@ -3,7 +3,8 @@ export type ToolCategory =
   | "Security"
   | "Automation"
   | "Data"
-  | "Database";
+  | "Database"
+  | "Testing";
 
 export type ToolDefinition = {
   id: string;
@@ -72,7 +73,7 @@ export const tools: ToolDefinition[] = [
     name: "Regex Tester",
     slug: "regex-tester",
     description: "Test patterns, inspect matches, and catch invalid regular expressions without risking client-side code execution.",
-    category: "Formatting",
+    category: "Testing",
     keywords: ["regex", "regular expression", "pattern", "match", "tester"],
     featured: true,
     related: ["json-formatter", "cron-generator"],

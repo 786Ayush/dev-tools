@@ -28,6 +28,7 @@ export default function JsonFormatterTool() {
     const result = formatJsonValue(input, false);
     if (!result.ok) {
       setError(result.error ?? "Invalid JSON input.");
+      setOutput("");
       return;
     }
     setOutput(result.value ?? "");
@@ -38,6 +39,7 @@ export default function JsonFormatterTool() {
     const result = formatJsonValue(input, true);
     if (!result.ok) {
       setError(result.error ?? "Invalid JSON input.");
+      setOutput("");
       return;
     }
     setOutput(result.value ?? "");

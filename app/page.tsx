@@ -16,10 +16,10 @@ export default function Home() {
               Fast browser-based utilities
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Free Online Developer Tools
+              AllToolHub: Private Developer Tools That Run in Your Browser
             </h1>
             <p className="mt-5 max-w-xl text-lg text-slate-300">
-              Format, validate, decode, and transform data with fast, privacy-friendly tools that work right in your browser.
+              JSON, JWT, cron, regex, CSV, and SQL tools that never upload your data. Free, no sign-up.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link

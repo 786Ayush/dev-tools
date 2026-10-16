@@ -12,6 +12,14 @@ const defaultConfig = {
   dayOfWeek: "*",
 };
 
+const fieldLabels: Record<keyof typeof defaultConfig, string> = {
+  minute: "Minute",
+  hour: "Hour",
+  dayOfMonth: "Day of month",
+  month: "Month",
+  dayOfWeek: "Day of week",
+};
+
 export default function CronGeneratorTool() {
   const [config, setConfig] = useState(defaultConfig);
   const [result, setResult] = useState(() => buildCronExpression(defaultConfig));
@@ -60,7 +68,7 @@ export default function CronGeneratorTool() {
         <div className="grid gap-4 sm:grid-cols-2">
           {Object.entries(config).map(([field, value]) => (
             <label key={field} className="block text-sm text-slate-200">
-              <span className="mb-2 block capitalize">{field}</span>
+              <span className="mb-2 block">{fieldLabels[field as keyof typeof defaultConfig]}</span>
               <input
                 value={value}
                 onChange={(event) => updateField(field as keyof typeof defaultConfig, event.target.value)}

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for browser-based developer utilities that process data locally in the browser.",
+  description: "Privacy policy for AllToolHub browser-based developer utilities that process data locally in the browser.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacy Policy | AllToolHub", url: "/privacy" },
 };
 
 export default function PrivacyPage() {

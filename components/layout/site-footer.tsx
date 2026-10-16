@@ -5,9 +5,9 @@ export default function SiteFooter() {
     <footer className="border-t border-slate-800 bg-slate-950/70">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-10 text-sm text-slate-300 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <h3 className="text-base font-semibold text-white">Developer Tools</h3>
+          <h3 className="text-base font-semibold text-white">AllToolHub</h3>
           <p className="mt-3 max-w-xs text-slate-400">
-            Browser-first utilities for formatting, decoding, testing, and transforming common developer data.
+            AllToolHub: browser-first utilities for formatting, decoding, testing, and transforming common developer data.
           </p>
         </div>
 
@@ -17,6 +17,7 @@ export default function SiteFooter() {
             <li><Link href="/tools/json-formatter">JSON formatter</Link></li>
             <li><Link href="/tools/jwt-decoder">JWT decoder</Link></li>
             <li><Link href="/tools/cron-generator">Cron generator</Link></li>
+            <li><Link href="/tools/csv-to-json">CSV to JSON</Link></li>
           </ul>
         </div>
 
